@@ -44,12 +44,16 @@
           {{#workBool}}
           <!-- WORK EXPERIENCE -->
           <div class="box">
-            <h2><i class= "fa fa-suitcase ico"></i> Work Experience</h2>
+            <h2><i class= "fa fa-suitcase ico"></i> Experience</h2>
             {{#work}}
               <div class="job clearfix">
                 <div class="row">
                   <div class="details">
-                    <div class="where">{{company}}</div>
+                    <div class="where-location">
+                      <div class="where">{{company}}</div>
+                      <div class="location">{{location}}</div>
+
+                    </div>
                     {{#website}}
                     <div class="address">
                       <a href="{{website}}" target= "_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -171,9 +175,55 @@
             </div>
             {{/basics.profiles}}
           </div>
+          {{#skillsBool}}
+          <!-- SKILLS -->
+          <div class="box">
+            <h2><i class="fa fa-tasks ico"></i> Skills</h2>
+            {{#skills}}
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  {{name}}
+                  {{#level}}<span class="skill-level">{{level}}</span>{{/level}}
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                {{#keywords}}
+                <span class= "skill badge">{{{.}}}</span>
+                {{/keywords}}
+              </div>
+            </div>
+            {{/skills}}
+          </div>
+          {{/skillsBool}}
+          {{#publicationsBool}}
+          <!-- PUBLICATIONS -->
+          <div class="box">
+            <h2><i class="fa fa-book ico"></i> Projects</h2>
+            {{#publications}}
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">{{name}}</div>
+              </div>
+              <div class="panel-body">
+                {{#publisher}}
+                <div class="publisher"><i class= "fa fa-bookmark ico"></i> {{publisher}}</div>
+                {{/publisher}}
+                <div class="year">{{day}} {{month}} {{year}}</div>
+                {{#website}}
+                <div class="address">
+                  <a href="{{website}}" target= "_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
+                </div>
+                {{/website}}
+                {{#summary}}
+                <p>{{{summary}}}</p>
+                {{/summary}}
+              </div>
+            </div>
+            {{/publications}}
+          </div>
+          {{/publicationsBool}}
           {{#educationBool}}
           <!-- EDUCATION -->
-          <div class="box">
+          <div class="box avoid-break">
             <h2><i class="fa fa-university ico"></i> Education</h2>
             <ul id="education" class="clearfix">
               {{#education}}
@@ -202,52 +252,6 @@
             </ul>
           </div>
           {{/educationBool}}
-          {{#skillsBool}}
-          <!-- SKILLS -->
-          <div class="box">
-            <h2><i class="fa fa-tasks ico"></i> Skills</h2>
-            {{#skills}}
-            <div class="skills clearfix">
-              <div class="item-skills">
-                  {{name}}
-                  {{#level}}<span class="skill-level">{{level}}</span>{{/level}}
-              </div>
-              <div class="col-sm-offset-1 col-sm-12 clearfix">
-                {{#keywords}}
-                <span class= "skill badge">{{{.}}}</span>
-                {{/keywords}}
-              </div>
-            </div>
-            {{/skills}}
-          </div>
-          {{/skillsBool}}
-          {{#publicationsBool}}
-          <!-- PUBLICATIONS -->
-          <div class="box">
-            <h2><i class="fa fa-book ico"></i> Publications</h2>
-            {{#publications}}
-            <div class="publication panel panel-default">
-              <div class="panel-heading">
-                <div class="name panel-title">{{name}}</div>
-              </div>
-              <div class="panel-body">
-                {{#publisher}}
-                <div class="publisher"><i class= "fa fa-bookmark ico"></i> {{publisher}}</div>
-                {{/publisher}}
-                <div class="year">{{day}} {{month}} {{year}}</div>
-                {{#website}}
-                <div class="address">
-                  <a href="{{website}}" target= "_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
-                </div>
-                {{/website}}
-                {{#summary}}
-                <p>{{{summary}}}</p>
-                {{/summary}}
-              </div>
-            </div>
-            {{/publications}}
-          </div>
-          {{/publicationsBool}}
           {{#languagesBool}}
           <!-- LANGUAGES -->
           <div class="box">
