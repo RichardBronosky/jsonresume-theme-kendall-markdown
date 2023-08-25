@@ -44,13 +44,13 @@ blockquote {
   padding: 0;
   font-size: 1.5em;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: -1px;
 }
 #text-header h1::first-line{
   font-size: 1.5em;
   font-weight: 800;
   line-height: 1.5em;
+  text-transform: uppercase;
 }
 #text-header h1 span{
   color: #334960;
@@ -79,6 +79,25 @@ blockquote {
   text-transform: uppercase;
 }
 
+#section_about p{
+  margin-left: 1.2em;
+}
+#section_about h1{
+  margin-left: 1.0em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+/*#section_work_experience{}*/
+/*#section_awards{}*/
+/*#section_volunteer{}*/
+/*#section_projects{}*/
+/*#section_contact{}*/
+/*#section_skills{}*/
+/*#section_publications{}*/
+/*#section_languages{}*/
+/*#section_hobbies{}*/
+/*#section_education{}*/
+
 #awards,
 #education{
   margin-top: 20px;
@@ -96,14 +115,7 @@ blockquote {
   top: 0;
   content: ' ';
   display: block;
-  background: #32475c;
-  background: -moz-linear-gradient(top,  #ffffff 0%, #32475c 7%, #32475c 89%, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#32475c), color-stop(89%,#32475c), color-stop(100%,#ffffff));
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: -o-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: -ms-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+  background: none;
 }
 #awards li,
 #education li{
@@ -133,7 +145,7 @@ blockquote {
 }
 #awards .description:after,
 #education .description:after {
-  content: '';
+  content: none;
   position: absolute;
   top: 15px;
   right: 0;
@@ -273,4 +285,37 @@ blockquote {
   margin: 10px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+}
+
+.list-group {
+  /*/ No need to set list-style: none; since .list-group-item is block level /*/
+  margin-bottom: 20px;
+  padding-left: 0; /*/ reset padding because ul and ol /*/
+}
+
+
+/*/ Individual list items //
+//
+// Use on `li`s or `div`s within the `.list-group` parent. /*/
+
+.list-group-item {
+  position: relative;
+  display: list-item;
+  padding: 0px;
+  /*/ Place the border on the list items and negative margin up for better styling /*/
+  margin: 0px 0px -1px 20px;
+  border: none;
+  /*
+  background-color: @list-group-bg;
+  border: 1px solid @list-group-border;
+
+  // Round the first and last items //
+  &:first-child {
+    .border-top-radius(@list-group-border-radius);
+  }
+  &:last-child {
+    margin-bottom: 0;
+    .border-bottom-radius(@list-group-border-radius);
+  }
+  */
 }

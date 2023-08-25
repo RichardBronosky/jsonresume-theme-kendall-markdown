@@ -2,6 +2,8 @@ var fs = require('fs');
 var _ = require('lodash');
 var gravatar = require('gravatar');
 var Mustache = require('mustache');
+var showdown  = require('showdown'),
+    converter = new showdown.Converter();
 
 var d = new Date();
 var curyear = d.getFullYear();
@@ -37,6 +39,7 @@ function getMonth(startDateStr) {
 
 function render(resumeObject) {
 
+    resumeObject.basics.summary = converter.makeHtml(resumeObject.basics.summary);
     resumeObject.basics.capitalName = resumeObject.basics.name.toUpperCase();
     if(resumeObject.basics && resumeObject.basics.email) {
         resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
