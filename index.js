@@ -53,9 +53,14 @@ function render(resumeObject) {
     }
 
     _.each(resumeObject.basics.profiles, function(p){
-        switch(p.network.toLowerCase()) {
+        switch(p.network.toLowerCase().replaceAll(/[^a-z]/gi, '')) {
             // special cases
-            case "google-plus":
+            case "twitter":
+            case "x":
+            case "xtwitter":
+            case "twitterx":
+                p.iconClass = "fab fa-x-twitter";
+                break;
             case "googleplus":
                 p.iconClass = "fab fa-google-plus";
                 break;
@@ -80,12 +85,13 @@ function render(resumeObject) {
             case "tumbler":
                 p.iconClass = "fab fa-tumblr";
                 break;
-            case "stack-overflow":
             case "stackoverflow":
                 p.iconClass = "fab fa-stack-overflow";
                 break;
             case "blog":
             case "rss":
+            case "cover letter".replaceAll(' ',''):
+            case "not a cover letter".replaceAll(' ',''):
                 p.iconClass = "fas fa-rss";
                 break;
             case "gitlab":
