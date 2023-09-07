@@ -258,5 +258,10 @@ function render(resumeObject) {
     return resumeHTML;
 };
 module.exports = {
-    render: render
+    render: render,
+    pdfRenderOptions: {
+      width: '8.5in',
+      height: '74in',
+      format: undefined
+    }
 }

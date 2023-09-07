@@ -1,22 +1,25 @@
 {
   "name": "jsonresume-theme-kendall-markdown",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A JSON Resume theme built with bootstrap",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichardBronosky/jsonresume-theme-kendall-markdown.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "M. Adam Kendall",
+  "author": "Bruno Bronosky",
+  "co-authors": [
+    "M. Adam Kendall"
+  ],
   "license": "MIT",
   "dependencies": {
     "gravatar": "^1.0.6",
     "lodash": "^4.17.20",
     "mustache": "^2.2.1",
     "showdown": "^2.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Ksinia/jsonresume-theme-kendall.git"
   },
   "keywords": [
     "json",
@@ -25,7 +28,7 @@
     "markdown"
   ],
   "bugs": {
-    "url": "https://github.com/Ksinia/jsonresume-theme-kendall/issues"
+    "url": "https://github.com/RichardBronosky/jsonresume-theme-kendall-markdown/issues"
   },
-  "homepage": "https://github.com/Ksinia/jsonresume-theme-kendall"
+  "homepage": "https://github.com/RichardBronosky/jsonresume-theme-kendall-markdown"
 }
