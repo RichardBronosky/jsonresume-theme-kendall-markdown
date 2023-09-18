@@ -1,6 +1,6 @@
 # jsonresume-theme-kendall
 
-A theme for the [JSONResume](https://github.com/jsonresume/resume-schema) schema, that relies on Bootstrap and FontAwesome, added with some personal flair.
+A theme for the [JSONResume](https://github.com/jsonresume/resume-schema) schema, that relies on Bootstrap and FontAwesome, with Markdown for additional formatting options.
 
 **NOTE**: This supports schema 1.0.0. Some things may be missing or broken if your resume.json is using the older schema.
 
