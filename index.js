@@ -259,9 +259,21 @@ function render(resumeObject) {
 };
 module.exports = {
     render: render,
+    // SEE: https://pptr.dev/api/puppeteer.page.setviewport
+/*
+    pdfViewport: {
+      width: 1600,
+      height: 800
+    },
+*/
+    // SEE: https://github.com/puppeteer/puppeteer/issues/3357#issuecomment-1604577944
+    // SEE: https://pptr.dev/api/puppeteer.pdfoptions
     pdfRenderOptions: {
-      width: '8.5in',
-      height: '74in',
-      format: undefined
+      format: undefined,
+      width: 1600 / 0.75,
+      height: '100in',
+      preferCSSPageSize: true,
+      scale: 1 / 0.75,
+      mediaType: 'screen'
     }
 }
