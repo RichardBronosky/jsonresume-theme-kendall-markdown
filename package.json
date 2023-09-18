@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-kendall-markdown",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "A JSON Resume theme built with bootstrap",
   "main": "index.js",
   "repository": {
@@ -8,6 +8,10 @@
     "url": "https://github.com/RichardBronosky/jsonresume-theme-kendall-markdown.git"
   },
   "scripts": {
+    "rev-patch": "npm --no-git-tag-version version patch --force",
+    "rev-minor": "npm --no-git-tag-version version minor --force",
+    "rev-major": "npm --no-git-tag-version version major --force",
+    "publish": "git push || true && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bruno Bronosky",
